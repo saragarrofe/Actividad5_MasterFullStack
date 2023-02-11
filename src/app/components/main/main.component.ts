@@ -9,7 +9,10 @@ import { Noticias } from 'src/app/interfaces/noticias';
 export class MainComponent {
 
   arrNoticias: Noticias[] = [];
-  contactos: string = "";
+  pintarTitulo: string = "";
+  pintarFecha: string = "";
+  pintarImagen: string = "";
+  pintarNoticia: string = "";
   contador: number = 1;
   titulo: string = "";
   fecha: string = "";
@@ -20,7 +23,7 @@ export class MainComponent {
 
 
 
-  guardar(): void {
+  publicar(): void {
     let noticias: Noticias = {
       titulo: this.titulo,
       fecha: this.fecha,
@@ -45,9 +48,18 @@ export class MainComponent {
   }
 
   cargarDatos(): void {
-    this.contactos = "";
+    this.pintarTitulo = "";
+    this.pintarFecha = "";
+    this.pintarImagen = "";
+    this.pintarNoticia = "";
+
     this.arrNoticias.forEach(noticias => {
-      this.contactos += `<li>${noticias.titulo} ${noticias.fecha} </li>`
+      this.pintarTitulo += `<li>${noticias.titulo}</li>`
+      this.pintarFecha += `<li>${noticias.fecha}</li>`
+      this.pintarImagen += `<li>${noticias.imagen}</li>`
+      this.pintarNoticia += `<li>${noticias.noticia}</li>`
+
+
       // this.contactos = this.contactos + `<li>${persona.name} ${persona.surname} </li>` --> ES LO MISMO QUE LO DE ARRIBA
     });
 
