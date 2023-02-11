@@ -13,6 +13,7 @@ export class MainComponent {
   pintarFecha: string = "";
   pintarImagen: string = "";
   pintarNoticia: string = "";
+  pintarEntrada: string = "";
   contador: number = 1;
   titulo: string = "";
   fecha: string = "";
@@ -29,16 +30,16 @@ export class MainComponent {
       fecha: this.fecha,
       imagen: this.imagen,
       noticia: this.noticia,
+
       
      
     }
 
-    this.arrNoticias.push(noticias); // estamos llenando el array de noticias
-    console.log(this.arrNoticias)
+    this.arrNoticias.push(noticias); // lleno el array de noticias
     this.cargarDatos();
     this.contador++;
     
-    // esto siguiente lo ponemos para que el espacio nos quede vacío una vez le demos a guardar
+    // para que quede vacio al guardar
     this.titulo = "";
     this.fecha = "";
     this.imagen = "";
@@ -52,15 +53,19 @@ export class MainComponent {
     this.pintarFecha = "";
     this.pintarImagen = "";
     this.pintarNoticia = "";
+    this.pintarEntrada = "";
+
 
     this.arrNoticias.forEach(noticias => {
-      this.pintarTitulo += `<li>${noticias.titulo}</li>`
-      this.pintarFecha += `<li>${noticias.fecha}</li>`
-      this.pintarImagen += `<li>${noticias.imagen}</li>`
-      this.pintarNoticia += `<li>${noticias.noticia}</li>`
+      this.pintarEntrada += 
+      `<li>
+      <h3>${noticias.titulo}</h3>
+      <p>${noticias.fecha}</p>
+      <img src= "${noticias.imagen}">
+      <p>${noticias.noticia}</p>
+      </li>`
 
-
-      // this.contactos = this.contactos + `<li>${persona.name} ${persona.surname} </li>` --> ES LO MISMO QUE LO DE ARRIBA
+    
     });
 
   }

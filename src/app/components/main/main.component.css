@@ -1,0 +1,79 @@
+.wrapper {
+    padding-top: 30px;
+    background-color: beige;
+    border-radius: 10px;
+  }
+  
+  .titulo-accesorios {
+    padding-bottom: 10px;
+  }
+  
+  .article-wrapper-cards {
+    display: flex;
+    max-width: 100% 1440px;
+    gap: 25px;
+    flex-basis: 100%;
+    flex-direction: column;
+  }
+
+  .list {
+    list-style: none;
+  }
+  
+  .card {
+    flex-basis: 25%;
+    padding: 15px;
+    border-color: #d6d5d8;
+    border-width: 1px;
+    border-radius: 6px;
+    justify-content: center;
+  }
+  
+  .titulo {
+    padding-top: 5px;
+  }
+
+  .fecha {
+    padding: 5px;
+  }
+
+  .image {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  
+ 
+
+  /*
+
+
+<article class="wrapper">
+
+    <div class="card">
+      <label for="titulo">Introduce el titulo</label>
+      <input type="text" id="titulo" [(ngModel)]="titulo" class="header-noticia"> <!--   <h3 class="header-item-card">Cargador</h3> -->
+    </div>
+
+    <div class="card">
+      <label for="fecha">Introduce la fecha</label>
+      <input type="text" id="fecha" [(ngModel)]="fecha" class="texto-fecha"> <!-- <p class="p-item-card">-->
+    </div>
+
+    <div class="card">
+      <label for="imagen">Introduce la imagen</label>
+      <input type="url" id="imagen" [(ngModel)]="imagen" class="imagen-noticia"> <!-- hay que meter src   <img src="card.png" class="image-list-item-card"/>-->
+    </div>
+
+    <div class="card">
+      <label for="noticia">Introduce la notícia</label>
+      <input type="text" id="noticia" [(ngModel)]="noticia" class="texto-noticia"> <!-- <p class="p-item-card">-->
+    </div>
+
+    <button (click)="publicar()">Publicar</button>
+
+  </article>
+
+
+
+  */
