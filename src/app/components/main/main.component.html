@@ -1,35 +1,83 @@
-<p>Estoy dentro del main </p>
+<h2>Formulario</h2>
+<div class="wrapper-forumulario">
 
-<hr>
-
-
-
-<div>
-
-    <div>
-      <label for="titulo">Introduce el titulo</label>
-      <input type="text" id="titulo" [(ngModel)]="titulo">
+    <div class="card">
+      <label for="titulo">Titulo</label>
+      <input type="text" id="titulo" [(ngModel)]="titulo" class="header-noticia" placeholder="Introduce el titulo" required> <!--   <h3 class="header-item-card">Cargador</h3> -->
     </div>
 
-    <div>
-      <label for="fecha">Introduce la fecha</label>
-      <input type="text" id="fecha" [(ngModel)]="fecha"> 
+
+    <div class="card">
+      <label for="imagen">Imagen</label>
+      <input type="url" id="imagen" [(ngModel)]="imagen" class="imagen-noticia" placeholder="Introduce la URL de la imagen" required> <!-- <img src="card.png" class="image-list-item-card"/>-->
     </div>
 
-   <!--  <p>{{ nombre }} {{ apellido }}</p> -->
-    <button (click)="guardar()">Guardar</button>
+    <div class="card">
+      <label for="fecha">Fecha</label>
+      <input type="date" id="fecha" [(ngModel)]="fecha" class="texto-fecha" placeholder="Introduce la fecha" required> <!-- <p class="p-item-card">-->
+    </div>
 
-</div>
-
-<section>
-
-  <h2>Notícias</h2> <!--extrapolado a la actividad: ESTO ES EL APARTADO NOTICIAS-->
-  <ul [innerHTML]="contactos" class="contactos"> <!--LE ESTAMOS DICIENDO QUE EL CONTENIDO DE UL ESTA DEFINIDO EN LA PROPIEDAD CONTACTOS-->
-    <!-- <li> Juan Antonio Pérez </li>-->
-
-    
+    <div class="card">
+      <label for="noticia">Notícia</label>
+      <input type="text" id="noticia" [(ngModel)]="noticia" class="texto-noticia" placeholder="Introduce la notícia" required> <!-- <p class="p-item-card">-->
+    </div>
 
 
+    <div>
+      <button class="btn-style" (click)="publicar()">Publicar</button>
+    </div>
+
+   
+
+  </div>
+
+
+  <h2>Notícias</h2> 
+<section class="wrapper-noticias">
+  
+
+  <article class="article-wrapper-cards">
+
+     
+  <ul>
+    <li class="card">
+      <h3 class="titulo">{{primTitulo}}</h3>
+      <img class="imagen" src="./assets/images/imagen1.jpg" alt="primera noticia">
+      <span class="fecha">{{primFecha}}</span>
+      <p class="noticia">{{primNoticia}}</p>
+    </li>
+  </ul>
+  
+  
+  <ul>
+    <li class="card">
+      <h3 class="titulo">{{segTitulo}}</h3>
+      <img class="imagen" src="./assets/images/imagen2.jpg" alt="segunda noticia">
+      <span class="fecha">{{segFecha}}</span>
+      <p class="noticia">{{segNoticia}}</p>
+    </li>
+  </ul>
+  
+  
+  
+  
+  <ul>
+    <li class="card" [innerHTML]="pintarEntrada">
+      <h3 [innerHTML]="pintarTitulo" class="titulo">Titulo</h3>
+      <img [innerHTML]="pintarImagen" class="imagen" src="" alt="primera noticia">
+      <span [innerHTML]="pintarFecha" class="fecha">Fecha</span>
+      <p [innerHTML]="pintarNoticia" class="noticia">Noticia</p>
+    </li>
   </ul>
 
+
+
+
+  </article>
+
+
+
 </section>
+
+
+

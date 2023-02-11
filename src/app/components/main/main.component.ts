@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { SafeResourceUrl } from '@angular/platform-browser';
 import { Noticias } from 'src/app/interfaces/noticias';
 
 @Component({
@@ -8,6 +9,7 @@ import { Noticias } from 'src/app/interfaces/noticias';
 })
 export class MainComponent {
 
+  /* Propiedades funciones */
   arrNoticias: Noticias[] = [];
   pintarTitulo: string = "";
   pintarFecha: string = "";
@@ -15,24 +17,43 @@ export class MainComponent {
   pintarNoticia: string = "";
   pintarEntrada: string = "";
   contador: number = 1;
+
+
+  /* Propiedades noticia */
   titulo: string = "";
   fecha: string = "";
   imagen: string = "";
   noticia: string = "";
 
 
+  /* Noticias pintadas */
+  primTitulo: string = "";
+  primFecha: string = "";
+  primNoticia: string = "";
+
+  segTitulo: string = "";
+  segFecha: string = "";
+  segNoticia: string = "";
+  
+
+  constructor() {
+    this.primTitulo = "Soy el primer titulo"
+    this.primFecha = "Soy soy la primera fecha"
+    this.primNoticia = "Soy soy la primera noticia"
 
 
+    this.segTitulo = "Soy el segundo titulo"
+    this.segFecha = "Soy la segunda fecha"
+    this.segNoticia = "Soy la segunda noticia"
+
+  }
 
   publicar(): void {
     let noticias: Noticias = {
       titulo: this.titulo,
-      fecha: this.fecha,
       imagen: this.imagen,
+      fecha: this.fecha,
       noticia: this.noticia,
-
-      
-     
     }
 
     this.arrNoticias.push(noticias); // lleno el array de noticias
@@ -41,8 +62,8 @@ export class MainComponent {
     
     // para que quede vacio al guardar
     this.titulo = "";
-    this.fecha = "";
     this.imagen = "";
+    this.fecha = "";
     this.noticia = "";
     
     
@@ -50,8 +71,8 @@ export class MainComponent {
 
   cargarDatos(): void {
     this.pintarTitulo = "";
-    this.pintarFecha = "";
     this.pintarImagen = "";
+    this.pintarFecha = "";
     this.pintarNoticia = "";
     this.pintarEntrada = "";
 
@@ -60,8 +81,8 @@ export class MainComponent {
       this.pintarEntrada += 
       `<li>
       <h3>${noticias.titulo}</h3>
-      <p>${noticias.fecha}</p>
       <img src= "${noticias.imagen}">
+      <span>${noticias.fecha}</span>
       <p>${noticias.noticia}</p>
       </li>`
 
