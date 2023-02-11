@@ -1,0 +1,35 @@
+<p>Estoy dentro del main </p>
+
+<hr>
+
+
+
+<div>
+
+    <div>
+      <label for="titulo">Introduce el titulo</label>
+      <input type="text" id="titulo" [(ngModel)]="titulo">
+    </div>
+
+    <div>
+      <label for="fecha">Introduce la fecha</label>
+      <input type="text" id="fecha" [(ngModel)]="fecha"> 
+    </div>
+
+   <!--  <p>{{ nombre }} {{ apellido }}</p> -->
+    <button (click)="guardar()">Guardar</button>
+
+</div>
+
+<section>
+
+  <h2>Notícias</h2> <!--extrapolado a la actividad: ESTO ES EL APARTADO NOTICIAS-->
+  <ul [innerHTML]="contactos" class="contactos"> <!--LE ESTAMOS DICIENDO QUE EL CONTENIDO DE UL ESTA DEFINIDO EN LA PROPIEDAD CONTACTOS-->
+    <!-- <li> Juan Antonio Pérez </li>-->
+
+    
+
+
+  </ul>
+
+</section>
