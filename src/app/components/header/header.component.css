@@ -1,0 +1,29 @@
+header{
+    box-shadow: 1px 1px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid darkgrey;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    height: 80px;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+
+}
+
+header ul li{
+    margin: 0px 5px;
+}
+
+header ul a {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+  .image-logo {
+    width: 100%;
+  }
