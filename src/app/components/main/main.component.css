@@ -7,7 +7,7 @@
 .wrapper-formulario {
     margin: 20px 0px 20px 0px;
     padding: 20px 20px;
-    max-width: 1440px;
+    max-width: 1040px;
     background-color: #f0f6fe;
     border-radius: 20px;
 }
@@ -40,25 +40,24 @@
 .wrapper-noticias {
     margin: auto;
     padding-top: 30px;
+    padding-bottom: 30px;
     border-radius: 10px;
   }
   
   
   .article-wrapper-cards {
-    display: flex;
     max-width: 100% 1440px;
-    gap: 25px;
-    flex-basis: 100%;
-
-    
-   
   }
 
+
   .card {
-    flex-basis: 25%;
-    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
     list-style: none;
+    max-width: 100% 1040px;
     padding: 15px;
+    margin: 0px 0px 40px 0px;
     background: white;
     border-style: solid;
     border-color: #d6d5d8;
@@ -66,6 +65,13 @@
     border-radius: 6px;
     justify-content: center;
   }
+
+
+  .card-item {
+flex-basis: 50%;
+
+  }
+
 
   .titulo {
     padding-bottom: 10px;
@@ -98,107 +104,6 @@
  
 
 /*
-
-   </section>
-
-    <section class="wrapper-form">
-
-        <div class="wrapper-sorteo">
-            <h2 class="h2-ifhone-sorteo">Participa en el sorteo de un Ifhone 13</h2>
-                <p class="parrafo-ifhone-sorteo">Este verano, ¡venimos cargados de premios! Así que antes de irte de vacaciones, ¡participa en nuestro sorteo! y podrás llevarte un regalo increíble como un nuevo iFhone 13.</p>
-               <p class="parrafo-ifhone-sorteo">Rellena este formulario para ser uno de los afortunados.</p>
-        </div>
-     
-        <div class="wrapper-form-datos">
-
-            <form action="contact.php" method="post" class="wrapper-datos">
-
-              <div class="texto-form">
-
-                <label for="name-field"> <p>Nombre</p></label>
-
-                <input type="text" name="name" id="name-field" placeholder="Ari Gold" class="area">
-
-                <label for="email-field"><p>Email</p></label>
-
-                <input type="email" name="email" id="email-field" placeholder="arigold@mga.com" class="area">
-
-              </div>
-
-              <div class="boton-form">
-                <button type="submit" class="enviar">Enviar</button>
-              </div>
-            </form>
-        </div>
-
-       
-     </section>
-
-
-
-
-.wrapper-sorteo {
-  flex-basis: 70%;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.h2-ifhone-sorteo {
-  font-size: 40px;
-}
-
-.wrapper-form-datos {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 50px;
-  flex-basis: 30%;
-  padding-right: 50px;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-@media (min-width: 840px) {
-  .wrapper-form {
-    display: flex;
-    flex-direction: row;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .wrapper-sorteo {
-    flex-basis: 70%;
-    padding-left: 50px;
-  }
-
-  .wrapper-form-datos {
-    flex-basis: 30%;
-  }
-}
-
-.area {
-  padding: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #d6d5d8;
-  border-radius: 6px;
-  width: 100%;
-}
-
-.boton-form {
-  display: flex;
-  align-items: center;
-}
-
-.enviar {
-  font-size: 16px;
-  background-color: #5082ee;
-  color: white;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px 10px 20px;
-  height: auto;
-}
 
 
 

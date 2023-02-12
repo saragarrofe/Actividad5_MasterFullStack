@@ -1,25 +1,25 @@
 <h2>Formulario</h2>
-<div class="wrapper-forumulario">
+<div class="wrapper-formulario">
 
-    <div class="card">
+    <div class="item-formulario">
       <label for="titulo">Titulo</label>
-      <input type="text" id="titulo" [(ngModel)]="titulo" class="header-noticia" placeholder="Introduce el titulo" required> <!--   <h3 class="header-item-card">Cargador</h3> -->
+      <input type="text" id="titulo" [(ngModel)]="titulo" class="input-area" placeholder="Introduce el titulo" required> <!--   <h3 class="header-item-card">Cargador</h3> -->
     </div>
 
 
-    <div class="card">
+    <div class="item-formulario">
       <label for="imagen">Imagen</label>
-      <input type="url" id="imagen" [(ngModel)]="imagen" class="imagen-noticia" placeholder="Introduce la URL de la imagen" required> <!-- <img src="card.png" class="image-list-item-card"/>-->
+      <input type="url" id="imagen" [(ngModel)]="imagen" class="input-area" placeholder="Introduce la URL de la imagen" required> <!-- <img src="card.png" class="image-list-item-card"/>-->
     </div>
 
-    <div class="card">
+    <div class="item-formulario">
       <label for="fecha">Fecha</label>
-      <input type="date" id="fecha" [(ngModel)]="fecha" class="texto-fecha" placeholder="Introduce la fecha" required> <!-- <p class="p-item-card">-->
+      <input type="date" id="fecha" [(ngModel)]="fecha" class="input-area" placeholder="Introduce la fecha" required> <!-- <p class="p-item-card">-->
     </div>
 
-    <div class="card">
+    <div class="item-formulario">
       <label for="noticia">Notícia</label>
-      <input type="text" id="noticia" [(ngModel)]="noticia" class="texto-noticia" placeholder="Introduce la notícia" required> <!-- <p class="p-item-card">-->
+      <input type="text" id="noticia" [(ngModel)]="noticia" class="input-area" placeholder="Introduce la notícia" required> <!-- <p class="p-item-card">-->
     </div>
 
 
@@ -32,52 +32,42 @@
   </div>
 
 
-  <h2>Notícias</h2> 
-<section class="wrapper-noticias">
-  
 
+  
+  <section class="wrapper-noticias">
   <article class="article-wrapper-cards">
 
-     
-  <ul>
-    <li class="card">
-      <h3 class="titulo">{{primTitulo}}</h3>
-      <img class="imagen" src="./assets/images/imagen1.jpg" alt="primera noticia">
-      <span class="fecha">{{primFecha}}</span>
-      <p class="noticia">{{primNoticia}}</p>
-    </li>
-  </ul>
+    <h2>Notícias antiguas</h2> 
+    <ul class="card">
+      <li class="card-item">
+        <h3 class="titulo">{{primTitulo}}</h3>
+        <img class="imagen" src="./assets/images/imagen1.jpg" alt="primera noticia">
+        <span class="fecha">{{primFecha}}</span>
+        <p class="noticia">{{primNoticia}}</p>
+      </li>
   
   
-  <ul>
-    <li class="card">
-      <h3 class="titulo">{{segTitulo}}</h3>
-      <img class="imagen" src="./assets/images/imagen2.jpg" alt="segunda noticia">
-      <span class="fecha">{{segFecha}}</span>
-      <p class="noticia">{{segNoticia}}</p>
-    </li>
-  </ul>
-  
-  
-  
-  
-  <ul>
-    <li class="card" [innerHTML]="pintarEntrada">
-      <h3 [innerHTML]="pintarTitulo" class="titulo">Titulo</h3>
-      <img [innerHTML]="pintarImagen" class="imagen" src="" alt="primera noticia">
-      <span [innerHTML]="pintarFecha" class="fecha">Fecha</span>
-      <p [innerHTML]="pintarNoticia" class="noticia">Noticia</p>
-    </li>
-  </ul>
+      <li class="card-item">
+        <h3 class="titulo">{{segTitulo}}</h3>
+        <img class="imagen" src="./assets/images/imagen2.jpg" alt="segunda noticia">
+        <span class="fecha">{{segFecha}}</span>
+        <p class="noticia">{{segNoticia}}</p>
+      </li>
+    </ul>
 
 
-
-
+     <h2>Notícias recientes</h2> 
+     <ul class="card" [innerHTML]="pintarEntrada"></ul>
   </article>
-
-
-
 </section>
 
 
 
+
+
+
+  <!-- <li class="card-item" [innerHTML]="pintarEntrada">
+        <h3 [innerHTML]="pintarTitulo" class="titulo">Titulo</h3>
+      <img [innerHTML]="pintarImagen" class="imagen" src="" alt="pintar noticia">
+      <span [innerHTML]="pintarFecha" class="fecha">Fecha</span>
+      <p [innerHTML]="pintarNoticia" class="noticia">Noticia</p>  </li> -->

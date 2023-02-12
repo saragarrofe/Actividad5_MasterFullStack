@@ -37,14 +37,14 @@ export class MainComponent {
   
 
   constructor() {
-    this.primTitulo = "Soy el primer titulo"
-    this.primFecha = "Soy soy la primera fecha"
-    this.primNoticia = "Soy soy la primera noticia"
+    this.primTitulo = "La corresponsal de EL PAÍS en Brasil analiza la situación del país tras el asalto a los tres poderes"
+    this.primFecha = "8/2/2023"
+    this.primNoticia = "Era su primer día libre después de haber cubierto la muerte de Pelé y su funeral, además de la toma de posesión del nuevo presidente Luiz Inácio Lula da Silva. La corresponsal de EL PAÍS en Brasil, Naiara Galarraga Gortázar, lo aprovechaba comiendo con unos amigos. En el momento del café, sonó el teléfono móvil. No era una WhatsApp o un correo, era una llamada de la redacción. Se le activaron las alertas. Estaban asaltando las sedes del Congreso, la Presidencia y el Tribunal de Justicia, ubicadas en la Plaza de los Tres Poderes de Brasilia. Era el 8 de enero y la periodista tuvo que concluir su descanso de manera precipitada. Galarraga relató la historia completa hace unos días a un grupo de suscriptores de EL PAÍS en un encuentro virtual que forma parte del programa de actividades exclusivas de EL PAÍS+."
 
 
-    this.segTitulo = "Soy el segundo titulo"
-    this.segFecha = "Soy la segunda fecha"
-    this.segNoticia = "Soy la segunda noticia"
+    this.segTitulo = "Controlado el incendio forestal en Tortosa, tras quemar 30 hectáreas"
+    this.segFecha = "5/2/2023"
+    this.segNoticia = "Los Bombers han dado por controlado a las 18.30 de este domingo el incendio que se inició en la medianoche de este sábado para domingo en Bítem, cerca del municipio de Tortosa (Baix Ebre). El fuego ha estado ardiendo en la zona del Coll de l'Alba y ha afectado a unas 30 hectáreas, según ha ido informando Protección Civil y el cuerpo de bomberos a través de sus canales oficiales. Los bomberos han logrado controlar el fuego 18 horas después de que recibieran el aviso del mismo, a las 00.20 horas. Sobre el terreno trabajan 21 dotaciones terrestres y prevén tenerlo extinguido durante la jornada del lunes."
 
   }
 
@@ -79,11 +79,11 @@ export class MainComponent {
 
     this.arrNoticias.forEach(noticias => {
       this.pintarEntrada += 
-      `<li>
-      <h3>${noticias.titulo}</h3>
-      <img src= "${noticias.imagen}">
-      <span>${noticias.fecha}</span>
-      <p>${noticias.noticia}</p>
+      `<li class="card-item">
+      <h3 class="titulo">${noticias.titulo}</h3>
+      <img class="imagen" src= "${noticias.imagen}">
+      <span class="fecha">${noticias.fecha}</span>
+      <p class="noticia">${noticias.noticia}</p>
       </li>`
 
     
