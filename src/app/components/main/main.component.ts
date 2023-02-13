@@ -81,7 +81,9 @@ export class MainComponent {
       this.pintarEntrada += 
       `<li class="card-item">
       <h3 class="titulo">${noticias.titulo}</h3>
+      <figure class="contenedor-imagen">
       <img class="imagen" src= "${noticias.imagen}">
+      </figure>
       <span class="fecha">${noticias.fecha}</span>
       <p class="noticia">${noticias.noticia}</p>
       </li>`
